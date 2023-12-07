@@ -13,7 +13,7 @@ export const getOneOfEnum = (oneOf: OpenApiSchema[]): Enum[] =>
         } else {
             enums.push({
                 value: `'${item.const}'`,
-                name: `${item.title}` || `'${item.const}'`,
+                name: `'${item.title}'` || `'${item.const}'`,
                 type: 'string',
                 description: item.description || item.title || null,
             });
